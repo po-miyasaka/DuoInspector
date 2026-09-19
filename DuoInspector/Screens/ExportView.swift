@@ -58,7 +58,7 @@ struct DuoReport: Codable {
     }
 
     var markdown: String {
-        var s = "## FoldObake report \(tag.isEmpty ? "" : "(\(tag))")\n"
+        var s = "## DuoInspector report \(tag.isEmpty ? "" : "(\(tag))")\n"
         s += "- date: \(date.formatted(.iso8601))\n"
         s += "- posture: \(posture ?? "?")\n"
         s += "- window: \(windowSize.summary) / content: \(contentSize.summary)\n"
@@ -147,7 +147,7 @@ struct ReportCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("FoldObake \(report.tag)").font(.headline)
+            Text("DuoInspector \(report.tag)").font(.headline)
             Text(report.date.formatted()).font(.caption).foregroundStyle(.secondary)
             HStack(alignment: .top, spacing: 12) {
                 // ミニチュア（実寸の 1/2）

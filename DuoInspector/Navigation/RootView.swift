@@ -119,7 +119,7 @@ struct RootSplitView: View {
             List(Screen.allCases, selection: Binding<Screen?>(get: { selection }, set: { if let s = $0 { selection = s } })) { screen in
                 Label(screen.longTitle, systemImage: screen.symbol).tag(screen)
             }
-            .navigationTitle("FoldObake")
+            .navigationTitle("DuoInspector")
         } detail: {
             NavigationStack {
                 selection.view
@@ -180,7 +180,7 @@ struct RootBareView: View {
                             }
                         }
                     }
-                    .navigationTitle("FoldObake")
+                    .navigationTitle("DuoInspector")
                     .toolbar { ToolbarItem(placement: .confirmationAction) { Button("閉じる") { showPicker = false } } }
                 }
                 .presentationDetents([.medium, .large])
